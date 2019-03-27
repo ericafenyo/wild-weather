@@ -1,33 +1,120 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.d-flex {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.over-line {
+  font-size: 14px;
+}
+
+.p-1 {
+  padding: 4px;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.color-caption {
+  color: #bababa;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin: 8px 0;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin: 8px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 4px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.carousel {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  display: flex;
+}
+
+.carousel-wrapper {
+  height: 100%;
+  position: relative;
+  margin: 0 8px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ok {
+  flex: 1;
+  height: 100%;
+}
+
+.stage {
+  flex: 1;
+  background: #eee;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, .1); */
+  margin: 48px auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.shadow {
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, .1);
+}
+
+.fav-button {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, .1);
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.fav-button i {
+  display: inline-block;
+  color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-board {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
