@@ -1,153 +1,188 @@
 @mixin shadow {
-    border: solid 1px #dfe1e5;
+  border: solid 1px #dfe1e5;
 }
 
 @mixin center-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .justify-content-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .over-line {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .p-1 {
-    padding: 4px;
+  padding: 4px;
 }
 
 .caption {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .color-caption {
-    color: #bababa;
+  color: #bababa;
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
-    margin: 16px 0;
+  width: 60px;
+  height: 60px;
+  margin: 16px 0;
 }
 
-
-
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .carousel-wrapper {
-    width: 424px;
-    height: 100%;
-    margin: 0 24px;
-    position: relative;
-    overflow-x: hidden;
+  width: 424px;
+  height: 100%;
+  margin: 0 24px;
+  position: relative;
+  overflow-x: hidden;
 
-    .carousel {
-        position: absolute;
-        top: 12%;
-        left: 0%;
-        display: flex;
+  .carousel {
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    display: flex;
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955);
 
-        .card {
-            &:first-child {
-                margin-left: 16px;
-            }
+    .card {
+      &:first-child {
+        margin-left: 16px;
+      }
 
-            &:last-child {
-                margin-right: 16px;
-            }
-        }
+      &:last-child {
+        margin-right: 16px;
+      }
     }
+  }
 }
-
-
 
 .ok {
-    flex: 1;
-    height: 100%;
+  flex: 1;
+  height: 100%;
 }
 
-.stage {
+.weather-details {
+  flex: 1;
+  border-bottom: 1px solid #dfe1e5;
+  color: #555;
+
+  .side-left {
+    @include center-items();
+
+    flex-direction: column;
     flex: 1;
-    background: #eee;
+  }
+
+
+  .side-right {
+    @include center-items();
+    flex: 1;
+
+    p {
+      margin: 0 8px;
+
+      &:first-child {
+        font-size: 120px;
+        font-weight: 100;
+      }
+
+      &:last-child {
+        margin-bottom: 60px;
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.parent-card,
+.weather-details,
+.side-right {
+  display: flex;
 }
 
 .parent-card {
-    display: flex;
-}
-
-.parent-card {
-    @include shadow();
-    position: relative;
-    width: 600px;
-    height: 500px;
-    margin: 48px auto;
-    border-radius: 4px;
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 48px auto;
+  border-radius: 4px;
 }
 
 .card,
 .parent-card {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .card {
-    @include shadow();
-    @include center-items();
-    margin: 8px;
-    padding: 16px;
-    width: 120px;
-    border-radius: 4px;
-    border: solid 1px #dfe1e5;
-    background-color: #ffffff;
+  @include shadow();
+  @include center-items();
+  margin: 10px;
+  padding: 16px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
 
 .mx-4px {
-    margin: 0 4px;
+  margin: 0 4px;
 }
 
 .fav-button {
-    @include center-items();
-    @include shadow();
-    position: relative;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+  @include center-items();
+  @include shadow();
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 
-    i {
-        display: inline-block;
-        color: #878787;
-    }
+  i {
+    display: inline-block;
+    color: #878787;
+  }
 }
 
 .pl-2px {
-    padding-left: 2px;
+  padding-left: 2px;
+}
+
+.weather-board {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-active {
+  border: solid 1px #ff9800;
+  box-shadow: 0 0 4px rgba($color: #ff9800, $alpha: .1)
 }
 
 
-
-.weather-board {
-    width: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.detail-icon {
+  margin: 8px 0;
+  width: 100px;
+  height: 100px;
 }

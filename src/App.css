@@ -64,6 +64,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955);
+  transition: -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955), -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.518, 0.955);
 }
 
 .carousel-wrapper .carousel .card:first-child {
@@ -81,21 +85,71 @@
   height: 100%;
 }
 
-.stage {
+.weather-details {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background: #eee;
+  border-bottom: 1px solid #dfe1e5;
+  color: #555;
 }
 
-.parent-card {
+.weather-details .side-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.weather-details .side-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.weather-details .side-right p {
+  margin: 0 8px;
+}
+
+.weather-details .side-right p:first-child {
+  font-size: 120px;
+  font-weight: 100;
+}
+
+.weather-details .side-right p:last-child {
+  margin-bottom: 60px;
+  font-size: 40px;
+}
+
+.parent-card,
+.weather-details,
+.side-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .parent-card {
-  border: solid 1px #dfe1e5;
   position: relative;
   width: 600px;
   height: 500px;
@@ -122,11 +176,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 8px;
+  margin: 10px;
   padding: 16px;
   width: 120px;
   border-radius: 4px;
-  border: solid 1px #dfe1e5;
   background-color: #ffffff;
 }
 
@@ -172,5 +225,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.is-active {
+  border: solid 1px #ff9800;
+  -webkit-box-shadow: 0 0 4px rgba(255, 152, 0, 0.1);
+          box-shadow: 0 0 4px rgba(255, 152, 0, 0.1);
+}
+
+.detail-icon {
+  margin: 8px 0;
+  width: 100px;
+  height: 100px;
 }
 /*# sourceMappingURL=App.css.map */
